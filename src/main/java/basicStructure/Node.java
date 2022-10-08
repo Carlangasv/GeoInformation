@@ -1,31 +1,22 @@
 package basicStructure;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
-
+@Getter @Setter
 public abstract class Node {
     private String commonState;
-
-    public Node() {
-    }
-
+    private List<Link> links;
     public Node(String commonState) {
         this.commonState = commonState;
+        this.links = new ArrayList<>();
     }
 
-    public List<Link> getLinks(){
-        return new ArrayList<>();
+    public Node(){
+        this.links = new ArrayList<>();
     }
 
     public abstract String geoInformation();
-
-
-
-    public String getCommonState() {
-        return commonState;
-    }
-
-    public void setCommonState(String commonState) {
-        this.commonState = commonState;
-    }
 }

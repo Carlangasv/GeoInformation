@@ -1,4 +1,5 @@
-package basicStructure;
+import basicStructure.*;
+import visualizer.XMLVisualizer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
         Graph mainGraph = initialize();
+        XMLVisualizer visualizer = new XMLVisualizer();
+        System.out.println(visualizer.visualize(mainGraph));
     }
 
     private static Graph initialize(){
