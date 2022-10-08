@@ -13,11 +13,11 @@ public class XMLVisualizer extends AbstractVisualizer{
             sb.append(e.geoInformation());
             sb.append("\n");
             e.getLinks().forEach( x ->{
-                sb.append("<Links>");
+                sb.append("<Link>");
                 sb.append(x.getSource().geoInformation());
                 sb.append("->");
                 sb.append(x.getDestiny().geoInformation());
-                sb.append("</Links> \n");
+                sb.append("</Link> \n");
             });
             sb.append("</Node> \n");
         });

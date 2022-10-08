@@ -1,4 +1,6 @@
 import basicStructure.*;
+import visualizer.AbstractVisualizer;
+import visualizer.JSONVisualizer;
 import visualizer.XMLVisualizer;
 
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         Graph mainGraph = initialize();
-        XMLVisualizer visualizer = new XMLVisualizer();
+        AbstractVisualizer visualizer = new JSONVisualizer();
         System.out.println(visualizer.visualize(mainGraph));
     }
 
