@@ -3,8 +3,6 @@ import visualizer.AbstractVisualizer;
 import visualizer.JSONVisualizer;
 import visualizer.XMLVisualizer;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
