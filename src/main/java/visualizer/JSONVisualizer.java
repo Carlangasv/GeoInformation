@@ -2,6 +2,9 @@ package visualizer;
 
 import basicStructure.Graph;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class JSONVisualizer extends AbstractVisualizer {
@@ -39,7 +42,14 @@ public class JSONVisualizer extends AbstractVisualizer {
         });
         sb.append("} \n");
         sb.append("} \n");
-
         return sb.toString();
+    }
+
+    @Override
+    public void export(Graph graph) throws IOException {
+        AbstractVisualizer visualizer = new JSONVisualizer();
+        BufferedWriter writer = new BufferedWriter(new FileWriter("export.xml"));
+        writer.write(visualizer.visualize(graph));
+        writer.close();
     }
 }
