@@ -32,7 +32,7 @@ public class JSONVisualizer extends AbstractVisualizer {
                 sb.append(", \n");
                 sb.append("\"destiny\":");
                 sb.append("\"");
-                sb.append(x.getDestiny().geoInformation());
+                sb.append(x.getTarget().geoInformation());
                 sb.append("\"");
                 sb.append("\n");
                 sb.append("}, \n");

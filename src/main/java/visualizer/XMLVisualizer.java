@@ -19,7 +19,7 @@ public class XMLVisualizer extends AbstractVisualizer{
                 sb.append("<Link>");
                 sb.append(x.getSource().geoInformation());
                 sb.append("->");
-                sb.append(x.getDestiny().geoInformation());
+                sb.append(x.getTarget().geoInformation());
                 sb.append("</Link> \n");
             });
             sb.append("</Node> \n");

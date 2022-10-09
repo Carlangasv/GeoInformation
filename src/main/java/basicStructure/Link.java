@@ -6,12 +6,12 @@ import lombok.Setter;
 @Getter@Setter
 public class Link {
     private Node source;
-    private Node destiny;
+    private Node target;
 
     public Link(Node source, Node destiny) {
         this.source = source;
-        this.destiny = destiny;
+        this.target = destiny;
         this.source.getLinks().add(this);
-        this.destiny.getLinks().add(this);
+        this.target.getLinks().add(this);
     }
 }
